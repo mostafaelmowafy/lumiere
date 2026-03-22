@@ -5,6 +5,6 @@ export const products = [
     description:
       "Promotes hair growth and strengthens hair follicles. Infused with natural oils to revitalize your scalp.",
     price: 29.99,
-    image: "/hair-serum.png",
+    image: "/hair-serum.webp",
   },
 ];

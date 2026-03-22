@@ -14,7 +14,7 @@ function ProductCard({ product }) {
         state={{ product }}
       >
         <img
-          className="w-full aspect-square object-cover bg-gray-100 transition-transform duration-500 group-hover:scale-110"
+          className="w-full aspect-square object-cover bg-gray-100 transition-transform duration-500 group-hover:scale-110 border-b-2 border-gray-200"
           src={product.image}
           alt={product.name}
         />
