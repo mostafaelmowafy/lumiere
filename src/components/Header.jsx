@@ -1,10 +1,10 @@
-import { FaOpencart } from "react-icons/fa";
-import { useCart } from "../context/CartContext";
+// import { FaOpencart } from "react-icons/fa";
+// import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom"; // تأكد من استيراد Link إذا كنت ستنتقل لصفحة العربة
 
 function Header() {
-  const { cartItems } = useCart();
-  const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  // const { cartItems } = useCart();
+  // const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-gray-800 border-b border-gray-100 text-center">
