@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation, useParams } from "react-router-dom"; // تغيير Navigate لـ useNavigate
 import { products } from "../Data";
-import { useCart } from "../context/CartContext";
-import { useState, useEffect } from "react";
+// import { useCart } from "../context/CartContext";
+import { useState } from "react";
 
 function Product() {
   const navigate = useNavigate(); // تعريف الـ navigate هنا
