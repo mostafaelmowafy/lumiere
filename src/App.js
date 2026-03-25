@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import WhatsAppButton from "./UI/WhatsAppButton";
 import ScrollToTop from "./ScrollToTop";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -23,12 +24,9 @@ function App() {
           <Route path="/product/:name" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route
-            path="*"
-            element={
-              <h1 className="text-center text-2xl mt-20">Page Not Found</h1>
-            }
-          />
+
+          {/* هنا التعديل */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
         <Footer />

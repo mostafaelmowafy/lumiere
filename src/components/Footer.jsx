@@ -14,9 +14,7 @@ function Footer() {
           >
             LUMIÈRE
           </Link>
-          <p className="text-sm text-gray-200">
-            Glow with confidence, naturally.
-          </p>
+          <p className="text-sm text-gray-200">تألقي بثقة.. بجمالك الطبيعي.</p>
         </div>
         <div className="container mx-auto mt-4 text-center text-xs ">
           <p className="mb-1 flex items-center justify-center gap-1">

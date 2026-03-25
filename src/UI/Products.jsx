@@ -11,13 +11,13 @@ function Products() {
         Our Products
       </h1>
       {isSingleProduct ? (
-        <div className="w-full max-w-2xl transform transition-all duration-500 hover:scale-[1.01]">
+        <div className="w-full max-w-2xl ">
           <div className="bg-white rounded-3xl shadow-2xl shadow-pink-100/50 border border-gray-100 overflow-hidden">
             <ProductCard product={products[0]} />
           </div>
 
           <p className="text-center mt-6 text-gray-400 italic text-sm">
-            ✨ Our Star Product - Carefully Crafted for You
+            منتجنا النجم - مصنوع بعناية من أجلك ✨
           </p>
         </div>
       ) : (

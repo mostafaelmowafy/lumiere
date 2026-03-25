@@ -2,18 +2,18 @@ const Features = () => {
   const features = [
     {
       icon: "✨",
-      title: "Premium Quality",
-      desc: "Carefully formulated with the finest ingredients",
+      title: "جودة فائقة",
+      desc: "مُركب بعناية فائقة باستخدام أجود المكونات العالمية",
     },
     {
       icon: "🌸",
-      title: "Gentle & Effective",
-      desc: "Suitable for all skin types, dermatologist tested",
+      title: "لطيف وفعّال",
+      desc: "مناسب لجميع أنواع البشرة، ومُختبر من قبل أطباء الجلدية",
     },
     {
       icon: "💕",
-      title: "Made with Love",
-      desc: "Crafted to make you feel beautiful every day",
+      title: "صُنع بكل حُب",
+      desc: "صُمم خصيصاً ليمنحكِ شعوراً بالثقة والجمال كل يوم",
     },
   ];
 
