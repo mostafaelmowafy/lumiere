@@ -58,7 +58,7 @@ function CheckoutPage({ orderItems }) {
             </div>
 
             {/* الهاتف */}
-            <div className="col-span-1">
+            <div className="col-span-2">
               <input
                 name="phone"
                 type="tel"
@@ -71,7 +71,7 @@ function CheckoutPage({ orderItems }) {
             </div>
 
             {/* هاتف بديل */}
-            <div className="col-span-1">
+            <div className="col-span-2">
               <input
                 name="otherPhone"
                 type="tel"
