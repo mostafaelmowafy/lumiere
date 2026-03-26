@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      <footer className="bg-footerColor text-white py-6">
+      <footer className=" text-blue-950 py-6 bg-gray-50 font-cairo">
         <div className="container mx-auto text-center mb-6">
           <Link
             to="/"
@@ -14,7 +14,7 @@ function Footer() {
           >
             LUMIÈRE
           </Link>
-          <p className="text-sm text-gray-200">تألقي بثقة.. بجمالك الطبيعي.</p>
+          <p className="text-sm text-gray-600">تألقي بثقة.. بجمالك الطبيعي.</p>
         </div>
         <div className="container mx-auto mt-4 text-center text-xs ">
           <p className="mb-1 flex items-center justify-center gap-1">

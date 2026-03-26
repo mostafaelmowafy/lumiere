@@ -18,7 +18,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="bg-white py-12 md:py-20 px-6">
+    <section className="bg-white py-12 md:py-20 px-6 font-cairo" dir="rtl">
       <div className="max-w-7xl mx-auto">
         {/* الحاوية الرئيسية: عمود واحد للموبايل، 3 أعمدة للكمبيوتر */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-8 lg:gap-x-16">

@@ -19,6 +19,9 @@ export default {
         bgColor: "#FDF1F5",
         footerColor: "#E7006E",
       },
+      fontFamily: {
+        cairo: ["Cairo", "sans-serif"],
+      },
     },
   },
   plugins: [],

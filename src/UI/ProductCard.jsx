@@ -1,33 +1,44 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import CheckoutPage from "../components/Checkout";
+import { MdLocalShipping, MdVerified } from "react-icons/md";
+import { RiSecurePaymentLine } from "react-icons/ri";
 
 function ProductCard({ product }) {
-  const navigate = useNavigate();
-
   // اختيار العرض الأول كافتراضي
   const [selectedOffer, setSelectedOffer] = useState(product.offers[0]);
   // عدد المجموعات (Packs) المطلوبة من العرض المختار
   const [packQuantity, setPackQuantity] = useState(1);
 
-  const handleBuyNow = () => {
-    // نرسل البيانات محسوبة بدقة لصفحة الشيك أوت
-    const orderItem = {
-      id: product.id,
-      name: product.name,
-      image: product.image,
-      offerLabel: selectedOffer.label,
-      singlePackPrice: selectedOffer.price,
-      packQuantity: packQuantity,
-      totalPrice: selectedOffer.price * packQuantity,
-      totalPieces: Number(selectedOffer.quantity) * Number(packQuantity),
-    };
-
-    navigate("/checkout", { state: { orderItems: [orderItem] } });
+  const orderItem = {
+    id: product.id,
+    name: product.name,
+    image: product.image,
+    offerLabel: selectedOffer.label,
+    singlePackPrice: selectedOffer.price,
+    packQuantity: packQuantity,
+    totalPrice: selectedOffer.price * packQuantity,
+    totalPieces: Number(selectedOffer.quantity) * Number(packQuantity),
   };
+
+  const features = [
+    {
+      icon: <MdVerified className="text-green-500 text-2xl" />,
+      text: "جودة مضمونة",
+    },
+    {
+      icon: <MdLocalShipping className="text-pink-500 text-2xl" />,
+      text: "توصيل سريع",
+    },
+    {
+      icon: <RiSecurePaymentLine className="text-blue-500 text-2xl" />,
+      text: "الدفع عند الاستلام",
+    },
+  ];
 
   return (
     <div
-      className="flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow text-right"
+      className="flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow text-right font-cairo"
       dir="rtl"
     >
       {/* الصورة */}
@@ -117,12 +128,21 @@ function ProductCard({ product }) {
           </div>
         </div>
 
-        <button
-          onClick={handleBuyNow}
-          className="w-full bg-brandPink hover:bg-black text-white font-bold py-4 rounded-xl mt-6 transition-all transform active:scale-95 shadow-lg"
-        >
-          اشتري الآن
-        </button>
+        <CheckoutPage orderItems={[orderItem]} />
+      </div>
+      <div
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-center font-cairo"
+        dir="rtl"
+      >
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition mb-14 mx-4"
+          >
+            {feature.icon}
+            <p className="mt-3 font-bold text-gray-700">{feature.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
