@@ -33,13 +33,9 @@ function Products() {
           الصورة بتوضح التحوّل الطبيعي بعد استخدام{" "}
           <span className=" font-bold text-gray-800">HAIR GROWTH SERUM:</span>
         </p>
-        <p>
+        <p className="mb-4 bg-yellow-100 p-4 rounded-lg border-l-4 border-yellow-400">
           <span className="font-bold text-red-500"> قبل: </span>بصيلات ضعيفة，
           شعر خفيف، ومناطق صلع واضحة.
-        </p>
-        <p>
-          <span className="font-bold text-green-500">بعد:</span> بصيلات صحية，
-          شعر أكثف، ومناطق الصلع بتتغطى تدريجياً من أول أسابيع الاستخدام.
         </p>
 
         <div>
@@ -48,6 +44,10 @@ function Products() {
             alt="Before and After Hair Growth Serum"
             className="w-full rounded-lg shadow-md border border-gray-200 mt-10"
           />
+          <p className="bg-green-100 p-4 rounded-lg border-l-4 border-green-400 mt-8 mb-4">
+            <span className="font-bold text-green-500">بعد:</span> بصيلات صحية，
+            شعر أكثف، ومناطق الصلع بتتغطى تدريجياً من أول أسابيع الاستخدام.
+          </p>
           <button
             onClick={() => {
               document

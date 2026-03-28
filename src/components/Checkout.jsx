@@ -6,12 +6,24 @@ function CheckoutPage({ orderItems }) {
 
   const validateForm = (formData) => {
     const newErrors = {};
+    const phoneRegex =
+      /^(?:(?:010|011|015)[0-9]{8}|(?:0127|0128|0120|0121)[0-9]{7})$/;
+
     if (!formData.get("name")) newErrors.name = "يجب إدخال الاسم بالكامل";
-    if (!formData.get("phone")) newErrors.phone = "يجب إدخال رقم الهاتف";
+
+    if (!formData.get("phone")) {
+      newErrors.phone = "يجب إدخال رقم الهاتف";
+    } else if (!phoneRegex.test(formData.get("phone"))) {
+      newErrors.phone =
+        "❌ من فضلك أدخل رقم هاتف صحيح يبدأ بـ 010 - 011 - 015 - 0127 - 0128 - 0120 - 0121 ويتكون من 11 رقم";
+    }
+
     if (!formData.get("governorate"))
       newErrors.governorate = "يجب إدخال المحافظة";
+
     if (!formData.get("address"))
       newErrors.address = "يجب إدخال العنوان بالتفصيل";
+
     return newErrors;
   };
 

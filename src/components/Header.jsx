@@ -17,15 +17,15 @@ function Header() {
         </span>
         <p>ودّع الفراغات والصلع الوراثي… وارجّع شعرك من جديد خلال أسابيع!</p>
       </motion.div>
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-gray-800  border-b border-gray-100 text-center">
-        {/* اللوجو */}
+      {/* <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-gray-800  border-b border-gray-100 text-center">
+        
         <Link
           to="/"
           className="font-bold text-4xl tracking-widest hover:text-brandPink transition-colors w-full"
         >
           <img src="/logo.png" alt="Logo" className="w-24 h-24 mx-auto" />
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
