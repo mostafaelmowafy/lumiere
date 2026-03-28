@@ -1,5 +1,5 @@
 import { CiShop } from "react-icons/ci";
-import { Link } from "react-router-dom"; // تأكد من استيراد Link إذا كنت ستنتقل لصفحة العربة
+// import { Link } from "react-router-dom"; // تأكد من استيراد Link إذا كنت ستنتقل لصفحة العربة
 import { motion } from "framer-motion";
 
 function Header() {
