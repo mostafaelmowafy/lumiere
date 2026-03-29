@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "./ScrollToTop";
 import NotFound from "./components/NotFound";
+import WhatsAppButton from "./UI/WhatsAppButton";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/product/:name" element={<Product />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <WhatsAppButton />
         <Footer />
       </CartProvider>
     </>
