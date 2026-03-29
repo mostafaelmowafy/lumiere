@@ -54,10 +54,10 @@ function Footer() {
           <div className="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-10 text-gray-700">
             <p className="flex items-center justify-center gap-2">
               <HiOutlinePhone className="text-lg text-slate-500" />
-              <span dir="ltr">+20 123 456 789</span>
+              <span dir="ltr">+20 106 867 8345 </span>
             </p>
 
-            <p className="flex items-center justify-center gap-2">
+            {/* <p className="flex items-center justify-center gap-2">
               <MdOutlineMailOutline className="text-lg text-slate-500" />
               <a
                 href="mailto:test@gmail.com"
@@ -66,7 +66,7 @@ function Footer() {
               >
                 test@gmail.com
               </a>
-            </p>
+            </p> */}
 
             <p className="flex items-center justify-center gap-2">
               <IoLocationOutline className="text-lg text-slate-500" />
