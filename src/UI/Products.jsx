@@ -102,6 +102,11 @@ function Products() {
               صحية， شعر أكثف، ومناطق الصلع بتتغطى تدريجياً من أول أسابيع
               الاستخدام.
             </p>
+            <img
+              src="/before-after2.jpeg"
+              alt="Before and After Hair Growth Serum"
+              className="w-full rounded-lg shadow-md border border-gray-200 mt-10"
+            />
             <button
               onClick={() => {
                 document
