@@ -1,6 +1,6 @@
 import { HiOutlinePhone } from "react-icons/hi";
 import { IoLocationOutline } from "react-icons/io5";
-import { MdOutlineMailOutline } from "react-icons/md";
+// import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function Footer() {
