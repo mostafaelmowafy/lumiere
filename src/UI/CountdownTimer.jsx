@@ -45,7 +45,7 @@ const CountdownTimer = () => {
     const interval = setInterval(updateTimer, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [RESET_LIMIT, TOTAL_SECONDS]);
 
   // دالة تحويل الثواني لتنسيق (ساعة:دقيقة:ثانية)
   const formatTime = (seconds) => {
