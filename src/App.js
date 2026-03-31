@@ -13,6 +13,7 @@ import WhatsAppButton from "./UI/WhatsAppButton";
 import { useEffect } from "react";
 
 import ReactPixel from "react-facebook-pixel";
+import SuccessPage from "./components/SuccessPage";
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/success" element={<SuccessPage />} />
           <Route path="/product/:name" element={<Product />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

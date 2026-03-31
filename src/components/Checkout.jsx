@@ -2,19 +2,28 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { MdLocalShipping } from "react-icons/md";
 import ReactPixel from "react-facebook-pixel";
+import { useNavigate } from "react-router-dom";
 
 function CheckoutPage({ product, selectedOffer, packQuantity }) {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const convertArabicNumsToEnglish = (str) => {
+    return str.replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d));
+  };
 
   const validateForm = (formData) => {
     const newErrors = {};
     const phoneRegex =
       /^(?:(?:010|011|015)[0-9]{8}|(?:0127|0128|0120|0121)[0-9]{7})$/;
 
+    // 1. نسحب الرقم وننظفه من المسافات
+    let rawPhone = (formData.get("phone") || "").trim();
+
+    const phone = convertArabicNumsToEnglish(rawPhone);
+
     if (!formData.get("name")) newErrors.name = "يجب إدخال الاسم بالكامل";
 
-    const phone = (formData.get("phone") || "").trim();
     if (!phone) {
       newErrors.phone = "يجب إدخال رقم الهاتف";
     } else if (!phoneRegex.test(phone)) {
@@ -84,11 +93,12 @@ function CheckoutPage({ product, selectedOffer, packQuantity }) {
             currency: "EGP",
             content_name: product.name,
           });
+
+          navigate("/success", {
+            state: { product, selectedOffer, packQuantity },
+          });
         }
 
-        toast.success("تم استلام طلبك بنجاح! شكراً لثقتك بنا ✨", {
-          duration: 5000,
-        });
         formElement.reset();
       } else {
         throw new Error("السيرفر لم يستجب بشكل صحيح");
